@@ -1,0 +1,65 @@
+<p>Componente de Interpolación</p>
+<p [ngClass]="nombre ? 'clase-ejemplo' : ''" [style.font-size]="nombre ? '30px' : '16px'">El Nombre es: {{ nombre ?
+    nombre : "vacío" }}</p>
+<p>La fecha es: {{ fecha }}</p>
+<div class="div-boton">
+    <button (click)="nombre = 'CHRISTIAN JIMÉNEZ'">Colocar Texto</button>
+</div>
+<div class="div-boton">
+    <button (click)="nombre = ''">Quitar Texto</button>
+</div>
+<br />
+<div appMiDirectiva>Mi directiva</div>
+<br />
+<div>
+    <h3>*ngFor</h3>
+    <ul>
+        <li *ngFor="let persona of familia">id: {{ persona.id }}, nombre: {{ persona.nombre }}</li>
+    </ul>
+</div>
+<br />
+<h3>*ngIf</h3>
+<div class="div-boton">
+    <button (click)="flag = !flag">Muestra Bandera</button>
+</div>
+<div *ngIf="flag">Bandera está en True</div>
+<br>
+<h3>*ngSwitch</h3>
+<div [ngSwitch]="valorSwitch">
+    <span *ngSwitchCase="1">Valor: 1</span>
+    <span *ngSwitchCase="2">Valor: 2</span>
+    <span *ngSwitchCase="3">Valor: 3</span>
+    <span *ngSwitchCase="4">Valor: 4</span>
+    <span *ngSwitchCase="5">Valor: 5</span>
+    <span *ngSwitchDefault>Valor: 0</span>
+</div>
+<br>
+<div class="div-boton">
+    <button (click)="valorSwitch=1">1</button>
+    <button (click)="valorSwitch=2">2</button>
+    <button (click)="valorSwitch=3">3</button>
+    <button (click)="valorSwitch=4">4</button>
+    <button (click)="valorSwitch=5">5</button>
+</div>
+<br>
+<br>
+<h3>Eventos</h3>
+<button (click)="decirHola()">Presioname</button>
+<br><br>
+<h3>toWay double binding</h3>
+<!-- <form #userForm="ngForm"> -->
+<p>
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" [(ngModel)]="nombre">
+</p>
+<p>
+    <label for="apellido">Apellido:</label>
+    <input id="apellido" type="text" [(ngModel)]="apellido">
+</p>
+<!-- </form> -->
+<div class="div-boton">
+    <button (click)="verDatos()">Mostrar</button>
+</div>
+<div class="div-boton">
+    <button (click)="cargarDatos()">Cargar</button>
+</div>
