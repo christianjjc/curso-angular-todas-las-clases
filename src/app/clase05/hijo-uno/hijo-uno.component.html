@@ -1,0 +1,19 @@
+<p>hijo-uno works!</p>
+<!-- <app-nieto-uno></app-nieto-uno> -->
+<div>
+    <h3>Alumnos</h3>
+    <table class="table table-striped">
+        <thead>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Notas</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let alumno of alumnos" (click)="alumnoClickeado(alumno)">
+                <td>{{alumno.id}}</td>
+                <td>{{alumno.nombre}}</td>
+                <td [appColorCalificacion]="alumno.notas">{{alumno.notas}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
