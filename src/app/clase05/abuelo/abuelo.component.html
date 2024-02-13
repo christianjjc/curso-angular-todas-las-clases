@@ -1,0 +1,13 @@
+<h2>Clase 5</h2>
+<p>Componente de Abuelo</p>
+
+<div class="row d-flex flex-row  justify-content-center gap-2">
+    <div>Aqui se muestra el dato enviadopor el Hijo: {{datoDesdeHijoEnPadre}}</div>
+    <button class="btn btn-primary rounded-1 w-25 ">Mi Primer Botón</button>
+    <button class="btn btn-secondary  rounded-1 w-25 ">Mi Segundo Botón</button>
+    <br>
+    <br>
+    <app-hijo-uno [alumnos]="alumnos"></app-hijo-uno>
+    <br><br>
+    <app-hijo-dos (datoDesdeHijo)="mensajeRecibidoDeHijo($event)"></app-hijo-dos>
+</div>
