@@ -1,5 +1,5 @@
 <h2>Clase 4</h2>
-<p>Componente de Interpolación</p>
+<h3>Interpolación - Pipes - Directivas</h3>
 <p [ngClass]="nombre ? 'clase-ejemplo' : ''" [style.font-size]="nombre ? '30px' : '16px'">El Nombre es: {{ nombre ?
     nombre : "vacío" }}</p>
 <p>La fecha es: {{ hoy }}</p>
@@ -13,19 +13,19 @@
 <div appMiDirectiva>Mi directiva</div>
 <br />
 <div>
-    <h3>*ngFor</h3>
+    <h4>*ngFor</h4>
     <ul>
         <li *ngFor="let persona of familia">id: {{ persona.id }}, nombre: {{ persona.nombre }}</li>
     </ul>
 </div>
 <br />
-<h3>*ngIf</h3>
+<h4>*ngIf</h4>
 <div class="div-boton">
     <button (click)="flag = !flag">Muestra Bandera</button>
 </div>
 <div *ngIf="flag">Bandera está en True</div>
 <br>
-<h3>*ngSwitch</h3>
+<h4>*ngSwitch</h4>
 <div [ngSwitch]="valorSwitch">
     <span *ngSwitchCase="1">Valor: 1</span>
     <span *ngSwitchCase="2">Valor: 2</span>
@@ -44,10 +44,10 @@
 </div>
 <br>
 <br>
-<h3>Eventos</h3>
+<h4>Eventos</h4>
 <button (click)="decirHola()">Presioname</button>
 <br><br>
-<h3>two-Way double binding</h3>
+<h4>two-Way double binding</h4>
 <!-- <form #userForm="ngForm"> -->
 <p>
     <label for="nombre">Nombre:</label>
@@ -67,7 +67,7 @@
 
 <br><br>
 
-<h3>Pipes</h3>
+<h4>Pipes</h4>
 
 <div style="font-size: 24px;">
     <span>hoy es {{hoy}}</span><br>

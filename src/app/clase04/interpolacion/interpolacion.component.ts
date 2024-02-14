@@ -31,7 +31,7 @@ export class InterpolacionComponent {
   }
 
   ngOnInit() {
-    this.nombre = 'Christian';
+    this.nombre = '';
     this.hoy = new Date();
   }
 
