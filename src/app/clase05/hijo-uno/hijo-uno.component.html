@@ -1,7 +1,7 @@
 <p>hijo-uno works!</p>
 <!-- <app-nieto-uno></app-nieto-uno> -->
 <div>
-    <h3>Alumnos</h3>
+    <h4>Alumnos</h4>
     <table class="table table-striped">
         <thead>
             <th>Id</th>
@@ -11,7 +11,7 @@
         <tbody>
             <tr *ngFor="let alumno of alumnos" (click)="alumnoClickeado(alumno)">
                 <td>{{alumno.id}}</td>
-                <td>{{alumno.nombre}}</td>
+                <td>{{alumno.nombre}} <span class="lead fs-6 fw-semibold text-danger">(dame click)</span></td>
                 <td [appColorCalificacion]="alumno.notas">{{alumno.notas}}</td>
             </tr>
         </tbody>

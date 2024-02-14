@@ -1,0 +1,78 @@
+<h2>Clase 7</h2>
+<h3>Angular Material</h3>
+
+<div class="my-5">
+    <p>* Mi Primer Botón (con clases)</p>
+    <button mat-raised-button color="primary">Primary</button>
+</div>
+
+<div class="my-5">
+    <p>* Una tarjeta de ejemplo (con clases)</p>
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>
+                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                bred for hunting.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<div class="my-5 d-flex gap-4">
+    <div>
+        <p>* Un Spinner Detenido y al 75%</p>
+        <mat-spinner [color]="'accent'" [mode]="'determinate'" [value]="75"></mat-spinner>
+    </div>
+    <div>
+        <p>* Un Spinner Infinito</p>
+        <mat-spinner [color]="'primary'" [mode]="'indeterminate'"></mat-spinner>
+    </div>
+</div>
+
+
+<div class="my-5">
+    <p>* Inputs para formulario (y otros componentes internos)</p>
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Fill form field</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Outline form field</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p>
+
+</div>
+
+<div class="my-5">
+    <p>* Abrir Dialog >>> son los modales </p>
+
+    <button mat-raised-button color="primary" (click)="openDialog()">Open dialog</button>
+
+
+
+</div>
+
+
+<div class="my-5">
+    <p>* Tablas con AM </p>
+    <app-table-basic-example></app-table-basic-example>
+</div>
