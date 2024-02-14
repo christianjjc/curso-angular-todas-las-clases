@@ -14,6 +14,11 @@ import { HijoDosComponent } from './clase05/hijo-dos/hijo-dos.component';
 import { NietoUnoComponent } from './clase05/nieto-uno/nieto-uno.component';
 import { ColorCalificacionDirective } from './clase05/directives/color-calificacion.directive';
 import { FormulariosComponent } from './clase06/formularios/formularios.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialExamplesComponent } from './clase07/material-examples/material-examples.component';
+import { Clase07Module } from './clase07/clase07.module';
+import { DialogContentExampleComponent } from './clase07/dialog-content-example/dialog-content-example.component';
+import { TableBasicExampleComponent } from './clase07/table-basic-example/table-basic-example.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +33,11 @@ import { FormulariosComponent } from './clase06/formularios/formularios.componen
     NietoUnoComponent,
     ColorCalificacionDirective,
     FormulariosComponent,
+    MaterialExamplesComponent,
+    DialogContentExampleComponent,
+    TableBasicExampleComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, Clase07Module],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
