@@ -14,4 +14,8 @@ export class HijoDosComponent {
     const mensaje: string = 'XXXX DATO ENVIADO DESDE EL COMPONENTE HIJO XXXX';
     this.datoDesdeHijo.emit(mensaje);
   }
+
+  otroMensajeConsola() {
+    console.log('funcion del hijo en Padre - hijo 2');
+  }
 }
