@@ -4,6 +4,7 @@ import { InterpolacionComponent } from './clase04/interpolacion/interpolacion.co
 import { AbueloComponent } from './clase05/abuelo/abuelo.component';
 import { FormulariosComponent } from './clase06/formularios/formularios.component';
 import { MaterialExamplesComponent } from './clase07/material-examples/material-examples.component';
+import { MiServicioComponent } from './clase09/mi-servicio/mi-servicio.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'clase04', pathMatch: 'full' },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'clase05', component: AbueloComponent },
   { path: 'clase06', component: FormulariosComponent },
   { path: 'clase07', component: MaterialExamplesComponent },
+  { path: 'clase09', component: MiServicioComponent },
 ];
 
 @NgModule({

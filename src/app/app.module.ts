@@ -19,6 +19,9 @@ import { MaterialExamplesComponent } from './clase07/material-examples/material-
 import { Clase07Module } from './clase07/clase07.module';
 import { DialogContentExampleComponent } from './clase07/dialog-content-example/dialog-content-example.component';
 import { TableBasicExampleComponent } from './clase07/table-basic-example/table-basic-example.component';
+import { MiServicioComponent } from './clase09/mi-servicio/mi-servicio.component';
+import { MiServicioService } from './clase09/services/mi-servicio.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,8 +39,18 @@ import { TableBasicExampleComponent } from './clase07/table-basic-example/table-
     MaterialExamplesComponent,
     DialogContentExampleComponent,
     TableBasicExampleComponent,
+    MiServicioComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, Clase07Module],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    Clase07Module,
+    HttpClientModule,
+  ],
+  providers: [MiServicioService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
