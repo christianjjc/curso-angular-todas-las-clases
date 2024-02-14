@@ -14,6 +14,10 @@ export class HijoUnoComponent {
     alert('alumno: ' + alumno.nombre);
   }
 
+  otroMensajeHijoUno() {
+    console.log('mensaje del hijo uno');
+  }
+
   init() {
     return {
       id: 0,

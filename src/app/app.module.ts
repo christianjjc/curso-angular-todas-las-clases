@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,7 @@ import { HijoUnoComponent } from './clase05/hijo-uno/hijo-uno.component';
 import { HijoDosComponent } from './clase05/hijo-dos/hijo-dos.component';
 import { NietoUnoComponent } from './clase05/nieto-uno/nieto-uno.component';
 import { ColorCalificacionDirective } from './clase05/directives/color-calificacion.directive';
+import { FormulariosComponent } from './clase06/formularios/formularios.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,9 @@ import { ColorCalificacionDirective } from './clase05/directives/color-calificac
     HijoDosComponent,
     NietoUnoComponent,
     ColorCalificacionDirective,
+    FormulariosComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
