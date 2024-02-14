@@ -1,0 +1,25 @@
+<h2>Clase 9</h2>
+<h3>Servicios</h3>
+
+<div class="my-5">
+    <button mat-raised-button color="primary"
+        (click)="toggleMostrarLista=!toggleMostrarLista">{{toggleMostrarLista?'Ocultar Lista':'Mostrar Lista'}}</button>
+</div>
+
+<ng-container *ngIf="toggleMostrarLista">
+    <p>Lista de Almunso recibidos desde el servicio</p>
+    <table class="table table-striped">
+        <thead>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Notas</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let alumno of alumnos">
+                <td>{{alumno.id}}</td>
+                <td>{{alumno.nombre}}</td>
+                <td [appColorCalificacion]="alumno.notas">{{alumno.notas}}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>
