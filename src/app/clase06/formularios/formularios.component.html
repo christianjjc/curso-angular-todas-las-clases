@@ -1,0 +1,42 @@
+<h2>Clase 6</h2>
+<h3>Formularios - Reactivo</h3>
+<div>
+    <form class="needs-validation" [formGroup]="formPrincipal" (ngSubmit)="mostrarDatosConsola()"
+        [ngClass]="formPrincipal.invalid && formPrincipal.touched ? 'border border-danger shadow-lg ':''">
+        <div class="row-control">
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" formControlName="nombre" />
+            <span *ngIf="formPrincipal.get('nombre')?.errors?.['minlength']"
+                class="text-danger  fs-6  fst-italic lead">Nombre debe teer un mínimo de 3 caracteres.</span>
+            <span *ngIf="formPrincipal.get('nombre')?.errors?.['required'] && formPrincipal.touched"
+                class="text-danger  fs-6  fst-italic lead">Nombre es un campo requerido.</span>
+        </div>
+        <div class="row-control">
+            <label for="edad">Edad:</label>
+            <input id="edad" formControlName="edad" type="edad" />
+        </div>
+
+        <div class="row-control">
+            <label for="genero">Genero:</label>
+            <input id="genero" formControlName="genero" />
+        </div>
+
+        <div class="row-control">
+            <label for="email">Email:</label>
+            <input id="email" formControlName="email" type="email" />
+            <span *ngIf="formPrincipal.get('email')?.errors?.['email']" class="text-danger fs-6 fst-italic lead">Debe
+                ingresar un email válido.</span>
+            <span *ngIf="formPrincipal.get('email')?.errors?.['required'] && formPrincipal.touched"
+                class="text-danger fs-6  fst-italic lead">Email es un campo requerido.</span>
+        </div>
+
+        <button class="btn btn-primary form-control m-1" type="submit" [disabled]="formPrincipal.invalid">Grabar
+            Persona</button>
+        <a class="btn btn-danger form-control m-1" routerLink="/clase04">Cancelar</a>
+    </form>
+    <br><br>
+    <ng-container *ngIf="!formPrincipal.invalid">
+        {{formPrincipal.value|json}}
+    </ng-container>
+
+</div>

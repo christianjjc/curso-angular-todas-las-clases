@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class InterpolacionComponent {
   public nombre: string = '';
   public apellido: string = '';
-  public fecha: Date = new Date();
+  public hoy: Date = new Date();
   public flag: boolean = false;
   public valorSwitch: number = 0;
 
@@ -32,7 +32,7 @@ export class InterpolacionComponent {
 
   ngOnInit() {
     this.nombre = '';
-    this.fecha = new Date();
+    this.hoy = new Date();
   }
 
   decirHola() {
